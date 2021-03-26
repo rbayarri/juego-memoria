@@ -61,7 +61,7 @@
         cuadrosVisibles[1].classList.add("encontrado");
         quitarEvento(cuadrosVisibles[0]);
         quitarEvento(cuadrosVisibles[1]);
-        setTimeout(terminaJuego,1000);
+        terminaJuego();
       }else{
         cuadrosVisibles[0].classList.remove("visible");
         cuadrosVisibles[1].classList.remove("visible");
