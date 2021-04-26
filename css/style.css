@@ -1,13 +1,52 @@
-.cuadro, .cuadro-vacio{
-  border: 1px solid black;
+*, *::after, *::before {
+	-webkit-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-app-region: no-drag;
+	cursor: default;
+}
+
+.contenedor{
+  position: relative;
   height: 20vh;
   width: auto;
-  cursor: pointer;
   padding: 0;
+}
+.no-overlay{
+  height: 20vh;
+  width: auto;
+  padding: 0;
+  border: 1px solid black;
+
+}
+.overlay{
+  position: absolute;
+  height: 20vh;
+  width: auto;
+  padding: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.visible{
+  transition: opacity 0.1s linear .3s , transform 1s;
+  opacity: 1;
+  transform: none;
+}
+img.salir{
+  transition: opacity .2s ease-out, transform .5s;
+  opacity: 0;
+  transform: rotateY(180deg);
+}
+
+.cuadro, .cuadro-vacio{
+  cursor: pointer;
 }
 .encontrado{
   cursor: auto!important;
-  opacity: 0.8;
+  opacity: 1;
+  transform: none;
+  filter: grayscale(80%);
 }
 @media screen and (max-width:500px){
   .cuadro, .cuadro-vacio{
