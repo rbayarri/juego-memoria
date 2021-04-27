@@ -48,8 +48,13 @@ img.salir{
   transform: none;
   filter: grayscale(80%);
 }
-@media screen and (max-width:500px){
-  .cuadro, .cuadro-vacio{
-    max-width: 25%;
+@media screen and (max-width:435px){
+  .contenedor{
+    width: 25%;
+    height: auto;
+  }
+  .no-overlay, .overlay{
+    width: 100%;
+    height: auto;
   }
 }
